@@ -1,5 +1,5 @@
 {% set name = "django-ses" %}
-{% set version = "0.8.14" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ad45fca653db1725d2237d5aa1a4e2705789088717d69b9a91e4a1c7688896b5
+  sha256: 22ccd18a2add1e85c95df806d23382e5d977db35297622ea8dd5269a473afe51
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A Django email backend for Amazon's Simple Email Service"
+  summary: A Django email backend for Amazon's Simple Email Service
 
 extra:
   recipe-maintainers:
