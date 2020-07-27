@@ -5,7 +5,7 @@ Home: https://github.com/django-ses/django-ses
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Django email backend for Amazon's Simple Email Service
 
