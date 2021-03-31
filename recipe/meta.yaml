@@ -1,5 +1,5 @@
 {% set name = "django-ses" %}
-{% set version = "1.0.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9c0a3e59e1e2424093820fa7cd519aa35f9ba978c26917a97a30c682449f0df6
+  sha256: 1b366bdec1133fffd51ee6149832add24c6d9b86c56c0a3db60bad199ec3ac96
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - django
-    - boto >=2.31.0
+    - python >=3.6
+    - django >1.10
+    - boto3 >=1.0.0
     - pytz >=2016.10
     - future >=0.16.0
 
