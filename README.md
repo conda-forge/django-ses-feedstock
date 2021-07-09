@@ -36,6 +36,7 @@ Installing `django-ses` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `django-ses` can be installed with:
