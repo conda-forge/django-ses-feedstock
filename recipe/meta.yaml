@@ -1,5 +1,5 @@
 {% set name = "django-ses" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 54ddff0caf0aac62a6ec220a073c0214c70df58e3423685f3aa21e52b4329d34
+  sha256: 78f75f4af0e27130032137067c4a5428617af10bc2f8979dace6febd6fed967d
 
 build:
   noarch: python
@@ -39,3 +39,4 @@ about:
 extra:
   recipe-maintainers:
     - hadim
+    - MichelML
