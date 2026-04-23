@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e16103b9cebe9e573e09cc6db79f7e6b0a8a315b5dad32a627d95ad2e12c3810
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - poetry
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - poetry
   run:
     - poetry
-    - python >=3.7
+    - python >={{ python_min }}
     - django >=2.2
     - boto3 >=1.0.0
     - pytz >=2016.10
@@ -32,6 +32,8 @@ requirements:
     - requests
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - python -c "import importlib.util; assert importlib.util.find_spec('django_ses')"
 
